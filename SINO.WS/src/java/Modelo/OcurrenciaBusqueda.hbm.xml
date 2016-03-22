@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="Modelo.OcurrenciaBusqueda" >
+        <id name="idocurrencia" type="long" >
+            <column name="IDOCURRENCIA" precision="11" scale="0" />
+        </id>
+        <property name="ocufechaocurrencia" type="date" >
+            <column name="OCUFECHAOCURRENCIA" length="7" />
+        </property>
+        <property name="fecharegistro" type="string" >
+            <column name="FECHAREGISTRO" />
+        </property>
+        <property name="horaregistro" type="string" >
+            <column name="HORAREGISTRO" />
+        </property>
+        <property name="idtipo" type="int" >
+            <column name="IDTIPO" />
+        </property>
+        <property name="tipdescripcion" type="string" >
+            <column name="TIPDESCRICION" />
+        </property>
+        <property name="idcategoria" type="int" >
+            <column name="IDCATEGORIA" />
+        </property>
+        <property name="ctgdescripcion" type="string" >
+            <column name="CTGDESCRIPCION" />
+        </property>
+        <property name="idsubcategoria" type="int" >
+            <column name="IDSUBCATEGORIA" />
+        </property>
+        <property name="sctdescripcion" type="string" >
+            <column name="SCTDESCRIPCION" />
+        </property>
+        <property name="ocudetalle" type="string" >
+            <column name="OCUDETALLE" />
+        </property>
+        <property name="ocuestado" type="int" >
+            <column name="OCUESTADO" />
+        </property>
+        <property name="tsdetalle" type="string" >
+            <column name="TSDETALLE" />
+        </property>
+        <property name="usuregistra" type="java.lang.Long">
+            <column name="USUREGISTRA" precision="11" scale="0" />
+        </property>
+    </class>  
+    <sql-query name="buscarOcurrencias" callable="true">
+        <return class="Modelo.OcurrenciaBusqueda" />
+	{ call TSSNS_ListarOcurrencias(?,:fechainicio,:fechafin,:idtipo,:idcategoria,:idsubcategoria,:ocuestado) }
+    </sql-query>
+</hibernate-mapping>

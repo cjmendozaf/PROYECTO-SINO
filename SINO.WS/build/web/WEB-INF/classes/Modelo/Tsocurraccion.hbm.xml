@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/03/2016 11:58:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Tsocurraccion" table="TSOCURRACCION" optimistic-lock="version">
+        <id name="idocurraccion" type="long">
+            <column name="IDOCURRACCION" precision="11" scale="0" />
+            <generator class="sequence">
+                <param name="sequence">TSOCURRACCION_IDOCURRACCION</param>
+            </generator>
+        </id>
+        <property name="idocurrencia" type="int">
+            <column name="IDOCURRENCIA" />
+        </property>
+        <property name="oacdetalle" type="string">
+            <column name="OACDETALLE" length="500" />
+        </property>
+        <property name="usuregistra" type="java.lang.Long">
+            <column name="USUREGISTRA" precision="11" scale="0" />
+        </property>
+        <property name="fecharegistra" type="date">
+            <column name="FECHAREGISTRA" length="7" />
+        </property>
+        <property name="usuactualiza" type="java.lang.Long">
+            <column name="USUACTUALIZA" precision="11" scale="0" />
+        </property>
+        <property name="fechaactualiza" type="date">
+            <column name="FECHAACTUALIZA" length="7" />
+        </property>
+        <property name="usuelimina" type="java.lang.Long">
+            <column name="USUELIMINA" precision="11" scale="0" />
+        </property>
+        <property name="fechaelimina" type="date">
+            <column name="FECHAELIMINA" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

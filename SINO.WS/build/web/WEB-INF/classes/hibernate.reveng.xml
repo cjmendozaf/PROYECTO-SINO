@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-schema="SYS"/>
+  <table-filter match-name="TSCATEGORIA"/>
+  <table-filter match-name="TSSUBCATEGORI"/>
+  <table-filter match-name="TSOCURRACCION"/>
+  <table-filter match-name="TSESTADO"/>
+  <table-filter match-name="TSACCIOARGUME"/>
+  <table-filter match-name="TSOCURRENCIA"/>
+  <table-filter match-name="TSTIPO"/>
+  <table-filter match-name="TSNOCORRESPON"/>
+</hibernate-reverse-engineering>

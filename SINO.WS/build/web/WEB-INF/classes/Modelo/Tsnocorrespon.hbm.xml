@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="Modelo.Tsnocorrespon" table="TSNOCORRESPON" optimistic-lock="version">
+        <id name="idnocorrespon" type="long">
+            <column name="IDNOCORRESPON" precision="11" scale="0" />
+            <generator class="sequence">
+                <param name="sequence">TSNOCORRESPON_IDNOCORRESPON</param>
+            </generator>
+        </id>
+        <property name="idocurrencia" type="int">
+            <column name="IDOCURRENCIA" />
+        </property>
+        <property name="nocdetalle" type="string">
+            <column name="NOCDETALLE" length="500" />
+        </property>
+        <property name="usuregistra" type="java.lang.Long">
+            <column name="USUREGISTRA" precision="11" scale="0" />
+        </property>
+        <property name="fecharegistra" type="date">
+            <column name="FECHAREGISTRA" length="7" />
+        </property>
+        <property name="usuactualiza" type="java.lang.Long">
+            <column name="USUACTUALIZA" precision="11" scale="0" />
+        </property>
+        <property name="fechaactualiza" type="date">
+            <column name="FECHAACTUALIZA" length="7" />
+        </property>
+        <property name="usuelimina" type="java.lang.Long">
+            <column name="USUELIMINA" precision="11" scale="0" />
+        </property>
+        <property name="fechaelimina" type="date">
+            <column name="FECHAELIMINA" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

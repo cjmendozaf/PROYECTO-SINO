@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Modelo.ResumenTipo" >
+        <id name="idestado" type="int" >
+            <column name="IDESTADO"/>
+        </id>
+        <property name="tsdetalle" type="string" >
+            <column name="TSDETALLE" />
+        </property>
+        <property name="cantidad" type="int" >
+            <column name="CANTIDAD" />
+        </property>
+    </class>  
+    <sql-query name="resumenTipo" callable="true">
+        <return class="Modelo.ResumenTipo" />
+	{ call TSSNS_ResumenOcurrenciasTipo(?,:fechainicio,:fechafin,:idtipo) }
+    </sql-query>
+</hibernate-mapping>
